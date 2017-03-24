@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv-“X-UA-Compatible” content=”IE=9”/>
+	<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/Extend.js"></script>
+	<script type="text/javascript" src="js/Component.js"></script>
+	<script type="text/javascript" src="js/Rectangle.js"></script>
+	<script type="text/javascript" src="js/Mobile.js"></script>
+	<script type="text/javascript" src="js/RectangleMobile.js"></script>
+	<script type="text/javascript" src="js/Bande.js"></script>
+	<script type="text/javascript" src="js/ImageMobile.js"></script>
+	<script type="text/javascript" src="js/Fond.js"></script>
+	<script type="text/javascript" src="js/Phare.js"></script>
+	<script type="text/javascript" src="js/Roue.js"></script>
+	<script type="text/javascript" src="js/Voiture.js"></script>
+	<script type="text/javascript" src="js/Game.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+
+	
+	<title></title>
+</head>
+<body >
+	<audio  id="son-mov"> 
+	  <source src="audio/bouger.mp3" type="audio/mp3">
+	</audio>
+	<audio preload="auto" id="son-crash">
+	  <source src="audio/crash.mp3" type="audio/mp3">
+	</audio>
+	<audio loop id="son-rouler">
+		<source src="audio/rouler.mp3" type="audio/mp3">
+	</audio>
+	<audio id="son-background" preload="auto" autoplay loop>
+		<source src="audio/background.mp3" type="audio/mp3">
+	</audio>
+
+	<div class="container">
+		<div class="row main">
+			<div class="col-md-12 ">
+				<canvas id="jeu">
+
+				</canvas>
+			</div>
+
+		</div>
+		<form oninput="x.value=parseInt(vitesse.value);">
+			<div class="row"> 
+				<div class="col-md-3">
+
+				</div>
+				<div class="col-md-3">
+					<table class="table-condensed command ">
+						<tr>
+							<td class="text-center">
+								Vitesse
+							</td>
+							<td colspan="3" class="text-center">
+								<input type="range" id="vitesse" value ="2" min="1" max="100">
+							</td>
+							<td>
+								<output name="x" for="vitesse" id="output"></output>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								
+							</td>
+							<td colspan="3" class="text-center">
+								<button type="button" id="btn-top" class="btn btn-success btn-xs" aria-label="Left Align">
+									<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"> </span>
+								</button>
+							</td>
+							<td>
+								
+							</td>
+						</tr>
+						<tr>
+							<td class="text-right">
+								<button type="button"  id="phare-g" class="btn btn-primary btn-xs" aria-label="Left Align">
+									<span class="glyphicon glyphicon-flash" aria-hidden="true"> </span>
+								</button>
+							</td>
+
+							<td class="text-right">
+								<button type="button" id="btn-prec" class="btn btn-success btn-xs" aria-label="Left Align">
+									<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+								</button>
+							</td>
+							<td class="text-center">
+								<button type="button" id="btn-play-pause" class="btn btn-success btn-xs" aria-label="Center Align">
+									<span class="glyphicon glyphicon-stop" aria-hidden="true"></span>
+								</button>
+							</td>
+							<td >
+								<button type="button" id="btn-next" class="btn btn-success btn-xs" aria-label="Left Align">
+									<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"> </span>
+								</button>
+							</td>
+							<td>
+								<button type="button" id="phare-d"  class="btn btn-primary btn-xs" aria-label="Left Align">
+									<span class="glyphicon glyphicon-flash" aria-hidden="true"> </span>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								
+							</td>
+							<td colspan="3" class="text-center">
+								<button type="button" id="btn-bottom" class="btn btn-success btn-xs" aria-label="Left Align">
+									<span class="glyphicon glyphicon-arrow-down" aria-hidden="true"> </span>
+								</button>
+							</td>
+							<td>
+								
+							</td>
+						</tr>
+						<tr>
+
+							<td colspan="5" class="text-center">
+								Tableau de bord de conduite
+							</td>
+
+						</tr>
+					</table>	
+				</div>	
+				<div class="col-md-3">
+				</div>	
+			</div>
+		</form>
+	</div>
+
+</body>
+
+</html>
